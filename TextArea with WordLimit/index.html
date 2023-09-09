@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        background-color: gray;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    #textarea{
+        border-radius: 10px;
+        border: 3px solid rgb(85, 85, 85);
+    }
+    #number{
+        font-size: 30px;
+        font-weight: bold;
+        color: firebrick;
+    }
+</style>
+<body>
+    <h2 id="head">Type Anything under 100 Words!</h2>
+    <textarea name="" id="textarea" cols="50" rows="5"></textarea>
+    <div id="number"></div>
+    <div id="lastTyped"></div>
+    <script>
+        var num=100
+        function letterRemaining(){
+            if(num<=0){
+                alert('You Reached The Limit ')
+                textArea.disabled=true
+                
+            }else{
+                            document.getElementById('number').innerText=`Remaining letters: ${num-=1}`
+
+
+            }
+            
+        }
+        textArea=document.getElementById('textarea')
+        textArea.addEventListener('keypress',(e)=>{
+            document.getElementById('head').innerText=""
+            document.getElementById('number').innerText=`Last Typed: ${e.key}`
+            letterRemaining()
+        })
+    </script>
+</body>
+</html>
