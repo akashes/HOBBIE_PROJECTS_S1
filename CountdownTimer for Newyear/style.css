@@ -1,0 +1,62 @@
+  @import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+}
+body{
+    font-family: sans-serif;
+    overflow: hidden;
+}
+
+.container{
+    width: 100vw;
+    height: 100vh;
+    background-image: url(./images/jamie-fenn-PEVG_cqrIVo-unsplash.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* background-image: linear-gradient(60deg,purple,navy); */
+    padding: 20px;
+}
+#head{
+    transform: translateY(200px);
+    color: rgb(173, 173, 173);
+}
+#head span{
+    color: #ad0023;
+    font-size: 40px;
+    font-weight: bold;
+    text-shadow: 5px 5px 10px black;
+}
+.time{
+    display: flex;
+    gap: 3rem;
+    transform: translateX(400px);
+}
+#head{
+    transform: translateX(400px);
+
+}
+.time div{
+    flex-basis: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.time p{
+    font-size: 80px;
+
+}
+.time span{
+    color: gray;
+}
+.random-icon{
+    position: absolute;
+}
+.newFont{
+    color: black;
+    font-family: 'Cedarville Cursive',cursive;
+    
+
+}
