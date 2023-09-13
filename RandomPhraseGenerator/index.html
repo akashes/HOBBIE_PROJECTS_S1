@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-image: linear-gradient(60deg,lightBlue,rgb(233, 184, 93));
+        }
+        #btn{
+            padding: 2rem;
+            border-radius: 10px;
+        }
+        .container{
+            display: flex;
+            flex-direction: column;
+        }
+    </style>
+</head>
+<body>
+<div class="container" 
+
+    
+    >
+<button id="btn">Generate Random Phrase</button>
+    <div id="message"></div></div>
+   
+
+
+
+    <script>
+
+        function randPhraseGenerator(){
+        var words1 = ["24/7", "multi-Tier", "30,000 foot", "B-to-B", "win-win"];
+ var words2 = ["empowered", "value-added", "oriented", "focused", "aligned"];
+ var words3 = ["process", "solution", "tipping-point", "strategy", "vision"];
+ rand1=Math.floor(Math.random()*words1.length)
+ rand2=Math.floor(Math.random()*words2.length)
+ rand3=Math.floor(Math.random()*words3.length)
+
+ let randText=words1[rand1]+"  "+words2[rand2]+"  "+words3[rand3]
+ message.innerText=randText
+        }
+            btn.addEventListener('click',randPhraseGenerator)
+
+
+    </script>
+    
+</body>
+</html>
