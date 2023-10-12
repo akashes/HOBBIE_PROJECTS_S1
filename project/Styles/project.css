@@ -1,0 +1,234 @@
+/* can't allign title top section with the form top 
+cant align top nav in line of form*/
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    font-family:Arial, Helvetica, sans-serif
+}
+/*header start*/
+header{
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    padding: 20px;
+}
+header .container{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    margin-right: 100px;
+
+}
+.logo{
+    width: 100px;
+}
+header a{
+    text-decoration: none;
+    margin-right: 100px;
+    font-size: 14px;
+    letter-spacing: 2px;
+    /* font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
+    color: rgba(255, 255, 255,0.719);
+}
+
+/*header end*/
+
+
+
+/*banner start*/
+.banner-container{
+    display: flex;
+    align-items: center;
+    
+    width: 100%;   /*   b;ock element aayath kond default 100% width aayirikkille */
+
+    height: 100vh;
+    background: linear-gradient(rgba(6,72,105,0.849),rgb(3,96,133)) , url(../Images/watercolor-background_87374-69.webp);
+background-position: center;
+    
+
+    
+
+
+
+}
+.banner-container .container{
+    height: 100%;
+
+
+}
+/*banner-leftsection*/
+
+.left-section{
+    margin: 0px;
+
+
+    width: 601px;
+}
+.left-section h1{
+    color: whitesmoke;
+    font-size: 40px;
+}
+.left-section p{
+    margin: 0px;
+    font-size: var(--font-size);
+    letter-spacing: 2px;
+    color: rgba(255, 255, 255, .884);
+    margin-top: 18px;
+    line-height: 28px;
+}
+.banner-container .container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+.left-section button{
+    color:  #2098ca;
+    background-color:white;
+    border: none;
+    padding: 10px 25px;
+    border-radius:6px;
+    margin-top:15px;
+    font-weight: bold;
+    
+
+}
+/*banner-leftsection end*/
+
+
+
+/* banner right-section start */
+.right-section{
+    width: 400px;
+    background-color:white ;
+    border-radius: 15px;
+    padding: 40px 10px;
+    box-shadow: 0px 5px 6px rgba(0, 0, 0, 0.453);
+
+}
+.right-section h4{
+    font-size: 20px;
+    width: 300px;
+    margin:  0px auto 10px; 
+    color: rgb(136, 136, 136);
+}
+.input-group{
+    width: 300px;
+    margin: 30px auto;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+.input-group label{
+    color: rgb(165, 165, 165);
+    font-size: var(--font-size);
+    position: absolute;
+    top: 10px;
+}
+.input-group input{
+    border: none;
+    padding: 7px;
+    margin-top: 6px;
+    outline: none;
+    border-bottom: 1px solid #c9c9c96a;
+    color:#2098ca;
+    caret-color: rgb(255, 0, 0);
+
+}
+
+input:focus~label,input:valid~label{
+    color:#2098ca;
+    top: -10px;
+    font-size: 12pxa;
+    transition: 0.5s ease-in-out;
+
+}
+input:focus,input:valid{
+    border-color:#2098ca;
+
+    
+}
+.submit-button{
+    background-color:#2098ca; 
+    color: white;
+    border: none;
+    padding: 10px 0px; 
+    margin-top: 15px;
+    border-radius: 5px;
+    width: 300px;
+    cursor: pointer;
+   
+}
+.submit-section{
+    text-align: center;
+}
+.submit-button:hover{
+    box-shadow: 0 4px 6px silver;
+}
+/*banner end*/
+
+/* image container start */
+.card-header{
+    text-align: center;
+    margin-top: 15px;
+    font-size: 3rem;
+    font-weight: bold;
+    color:#333;
+    text-shadow: 4px 4px 2px rgba(51, 51, 51, 0.582);
+}
+.section-2{
+    display: flex;
+    justify-content: space-evenly;
+    height: 100vh;
+    align-items: center;
+}
+.card-container h1{
+    color: rgb(136, 136, 136);
+    
+}
+
+.card-container{
+    width: 350px;
+    height: 450px;
+    border-radius: 15px;
+    box-shadow: 10px 5px 26px rgb(58, 58, 58) ;
+    border-radius: 15px;
+    overflow: hidden;
+    text-align: center;
+
+    
+
+}
+.image-container{
+    width: 100%;
+    height: 90%;
+    margin-top: -10px;
+    overflow: hidden;
+    
+    
+}
+.image-container img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position:0px 10px;
+    transition: 0.5s ease-in-out;
+   
+}
+.image-container img:hover{
+    transform: scale(1.1) rotate(-5deg)
+
+}
+/* end of image section */
+/* start of footer */
+footer{
+    text-align: center;
+    color: grey;
+    padding: 15px;
+}
+/* end of footer */
