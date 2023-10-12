@@ -1,0 +1,43 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ul{
+    list-style: none;
+    margin: 0;
+        padding: 0;
+}
+h2{
+    text-align: center;
+}
+
+.gallery-container{
+    max-width: 1000px;
+    margin: 50px auto;
+   
+}
+.gallery-list{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    background-color: rgba(194, 194, 194, 0.603);
+}
+.gallery-list li{
+    flex-grow: 1;
+    height: 180px;
+}
+.gallery-list li:nth-child(3n){
+    margin-right: 0px;
+}
+.gallery-list li img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@media (max-width:700px){
+    li{
+        flex: 50%;
+    }
+}
