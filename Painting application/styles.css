@@ -1,0 +1,31 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+#canvas {
+	border: 1px solid black;
+}
+#color {
+	padding: 0px;
+	border: none;
+	background: none;
+	width: 44px;
+	height: 44px;
+}
+#thickness {
+	padding: 6px;
+}
+
+.example{
+    background-color: red;
+    width: 100px;
+    height: 100px;
+    margin-left: 300px;
+    margin-bottom: 500px;
+}
+.controls{
+	width: 300px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
