@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<style>
+			body {
+				padding-top: 50px;
+				font-family: Arial, Helvetica, sans-serif;
+				overflow-y: hidden;
+				overflow-x: hidden;
+			}
+			* {
+				padding: 0;
+				margin: 0;
+			}
+			.header {
+				color: rgb(65, 65, 65);
+				font-size: 1.5rem;
+				display: inline-block;
+				margin-bottom: 10px;
+			}
+			#canvas {
+				border: 1px solid black;
+				margin-left: 400px;
+				border: 2px solid yellow;
+				border-radius: 10px;
+			}
+			.button {
+				background-color: red;
+				color: white;
+				padding: 0.5rem;
+				border-radius: 20px;
+			}
+			header{
+				position: absolute;
+				top: 50px;
+			}
+		</style>
+	</head>
+	<body>
+		<header>
+			<span class="header"> Modern Art Generator 😉 </span> <br>
+			<span class="button" onclick="random()">Generate Painting</span>
+		</header>
+		<canvas id="canvas" width="600" height="600"></canvas>
+
+		<script>
+			const canvas = document.getElementById("canvas");
+			const ctx = canvas.getContext("2d");
+
+			
+			// for(var i=0;i<6;i++){
+			// 	for(var j=0;j<6;j++){
+			// 		ctx.fillStyle='rgb('+Math.floor(255-42*i)+','+Math.floor(255-42*j)+',0)'
+			// 		ctx.fillRect(j*100,i*100,100,100)
+			// 	}
+			// }
+
+			let colors=['red','green','blue','orange','aqua','gray','yellow','steelblue','firebrick','crimson','cyan','deeppink','lawngreen','tomato']
+			function random() {
+				var x = Math.floor(Math.random() * 600);
+				console.log(x);
+				var y = Math.floor(Math.random() * 600);
+				var a = Math.floor(Math.random() * 600);
+				var b = Math.floor(Math.random() * 600);
+				var c = Math.floor(Math.random() * 600);
+				var d = Math.floor(Math.random() * 600);
+
+				var e = Math.floor(Math.random() * 600);
+				var f = Math.floor(Math.random() * 600);
+				var piNUM=(Math.random()*2)
+				var lineWidth=Math.round(Math.random()*5)
+				var tf=Math.round(Math.random() * 2);
+
+				var colorNumber=Math.round(Math.random()*colors.length)
+				ctx.beginPath();
+				ctx.moveTo(x, y);
+				ctx.lineTo(a, b);
+				ctx.lineTo(c, d);
+				ctx.lineTo(e, f);
+				ctx.lineWidth=lineWidth
+				ctx.strokeStyle=colors[colorNumber]
+
+
+				ctx.stroke();
+				ctx.closePath()
+								ctx.beginPath();
+
+				ctx.arc(a,b,30,0,Math.PI*piNUM,tf)
+								ctx.lineWidth=lineWidth
+
+								ctx.stroke()
+
+												ctx.closePath()
+
+
+				ctx.beginPath();
+				ctx.moveTo(x, y);
+				ctx.lineTo(a, b);
+				ctx.lineTo(c, d);
+				ctx.lineTo(x, y);
+								ctx.lineWidth=lineWidth
+
+				ctx.stroke()
+				
+
+				setTimeout(random, 1000);
+			}
+		</script>
+		<script src="./main.js"></script>
+	</body>
+</html>
