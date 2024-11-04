@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Speech Recognition</title>
+    <style>
+        .container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            width:100vw;
+            flex-direction: column;
+            gap:20px
+        }
+        button{
+            padding: 5px;
+            border-radius: 5px;
+            border-width: 1px;
+        }
+        .output{
+            padding: 10px;
+            border: 1px solid #ddd;
+            width: 300px;
+            height: 200px;
+            overflow-y: auto;
+            white-space: pre-line; 
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+       <div>
+        <button class="btn">Click and Tell something</button>
+        <p><span style="color:red">Note:</span>Your device should be capable of recording external sounds</p>
+       </div>
+       <div class="output">
+
+       </div>
+
+    </div>
+    <script>
+        const output = document.getElementsByClassName('output')[0]
+        const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+        const recognition = new SpeechRecognition();
+
+        recognition.onresult = (e) => {
+            // alert('You said: ' + e.results[0][0].transcript);
+            const transcript =e.results[0][0].transcript
+            console.log(transcript)
+            output.innerHTML+=transcript+'<br/>'
+        };
+
+        document.querySelector('.btn').addEventListener('click', () => {
+            recognition.start();  // Start speech recognition when button is clicked
+        });   
+
+        
+        
+        </script>
+</body>
+</html>
